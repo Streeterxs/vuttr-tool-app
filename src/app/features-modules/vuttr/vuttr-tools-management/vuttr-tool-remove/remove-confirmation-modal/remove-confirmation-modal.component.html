@@ -1,0 +1,36 @@
+<div class="modal fade" #removeModal id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">
+            <svg
+              class="svgClose"
+              xmlns="http://www.w3.org/2000/svg" 
+              width="1rem" 
+              height="1rem" 
+              viewBox="0 0 61.414 61.42">
+              <defs>
+                  <style>
+                  .a{
+                      fill:none;
+                      stroke:#170c3a;
+                      stroke-miterlimit:10;
+                      stroke-width:3px;
+                  }
+                  </style>
+              </defs>
+              <g transform="translate(-568.793 -714.793)">
+                  <path class="a" d="M80,20.005l-60,60m60,0L20,20" transform="translate(549.501 695.5)"/>
+              </g>
+          </svg> <span id="removeModalTitleString">Remove Tool</span></h5>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to remove {{tool?.getTitle}}?</p>        
+      </div>
+      <div class="modal-footer">
+        <bb-button class="marginForButtons" cssClasses="btn btn-error-secondary buttonShadow" (click)="cancelToolRemotion()">Cancel</bb-button>
+        <bb-button class="marginForButtons" cssClasses="btn btn-error buttonShadow" (click)="removeTool()">Yes, remove</bb-button>
+      </div>
+    </div>
+  </div>
+</div>

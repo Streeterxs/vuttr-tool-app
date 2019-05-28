@@ -1,0 +1,48 @@
+.inputsForTags{
+    width: 100%;
+}
+
+.displayFlex{
+    display: flex;
+}
+
+.margin{
+    margin-top: 0.3rem !important;
+    margin-bottom: 0.3rem !important;
+}
+
+.custom-invalid{
+    background-color: #FEEFEE !important;
+    border: 1px solid #F95E5A !important;
+    color: #F95E5A !important;
+}
+
+.invalidString{
+    font-size: 1rem;
+    color: #F95E5A;
+    text-align: right;
+    clear: both;
+}
+
+.hashtagForTag{
+    display: flex;
+    align-items: center;
+    margin-right: 0.2rem;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.iconCorrection{
+    padding-right: 0.5rem;
+    font-size: 1rem;
+}
+
+.tagsMannagerButtons{
+    border-radius: 50%;
+    margin-left: 0.3rem;
+    font-size: 0.9rem;
+    line-height: 0px;
+    padding: 0px !important;
+    width: 1.8rem;
+    height: 1.8rem;
+}

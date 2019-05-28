@@ -1,0 +1,68 @@
+<div class="modal fade" #addModal id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><span class="iconCorrection"><i class="fas fa-plus"></i></span>Add new tool</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="1rem" 
+            height="1rem" 
+            viewBox="0 0 61.414 61.42">
+            <defs>
+              <style>
+                .a{
+                  fill:none;
+                  stroke:#170c3a;
+                  stroke-miterlimit:10;
+                  stroke-width:30px;
+                }
+              </style>
+            </defs>
+            <g transform="translate(-568.793 -714.793)">
+              <path class="a" d="M80,20.005l-60,60m60,0L20,20" transform="translate(549.501 695.5)"/>
+            </g>
+          </svg>
+        </button>
+      </div>
+      <form (ngSubmit)="formSubmit()" [formGroup]="addForm">
+        <div class="modal-body">
+              <div class="form-group">
+                <label for="inputToolName">Tool Name *</label>
+                <input type="text" [ngClass]="{ 'custom-invalid': addForm.controls.toolName.invalid && (addForm.controls.toolName.dirty || addForm.controls.toolName.touched) }" class="form-control" id="inputToolName" placeholder="Ex: Homes, Hammer, Kogs..." formControlName="toolName" required>
+                <div *ngIf="addForm.controls.toolName.invalid && (addForm.controls.toolName.dirty || addForm.controls.toolName.touched)">
+                    <div class="invalidString" *ngIf="addForm.controls.toolName.errors.required">Tool's name is required</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputToolLink">Tool Link *</label>
+                <input type="text" class="form-control" id="inputToolLink" [ngClass]="{ 'custom-invalid': addForm.controls.toolLink.invalid && (addForm.controls.toolLink.dirty || addForm.controls.toolLink.touched) }" placeholder="Ex: https://facebook.com" formControlName="toolLink" required>
+                <div *ngIf="addForm.controls.toolLink.invalid && (addForm.controls.toolLink.dirty || addForm.controls.toolLink.touched)">
+                    <div class="invalidString" *ngIf="addForm.controls.toolLink.errors.required">Tool's link is required</div>
+                    <div class="invalidString" *ngIf="addForm.controls.toolLink.errors.pattern">Tool's link must be a valid one</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputToolDesc">Tool Description</label>
+                <textarea class="form-control" id="inputToolDesc" placeholder="Describe here the functionalities of your tool." formControlName="toolDesc"></textarea>
+              </div>
+              <div class="form-group">              
+                <label for="divForAllTags">
+                  Tags
+                  <button type="button"  class="btn btn-error-secondary tagsMannagerButtons" (click)="removeLastTag()"><i class="fas fa-minus"></i></button>
+                  <button type="button"  class="btn btn-secondary tagsMannagerButtons" (click)="addNewTag()"><i class="fas fa-plus"></i></button>
+                </label>
+                <div id="divForAllTags" class="row" formArrayName="tags">
+                  <div class="col-4 displayFlex margin" *ngFor="let tag of tags.controls, let i=index">
+                    <span ngClass="hashtagForTag">#</span><input ngClass="inputsForTags" type="text" class="form-control" [formControlName]="i" placeholder="Ex: Trips, Work...">
+                  </div>
+                </div>
+              </div>              
+        </div>
+        <div class="modal-footer">
+            <button ngClass="modalButtons" type="submit" class="btn btn-primary buttonShadow" [disabled]="addForm.invalid">Add tool</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

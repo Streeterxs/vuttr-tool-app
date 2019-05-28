@@ -1,0 +1,19 @@
+<div id="filterDiv">
+    <div  class="form-row">
+        <div class="col">
+            <div class="inner-addon left-addon">
+                <i class="glyphicon fas fa-search"></i>
+                <input class="form-control" type="text" placeholder="search" (keyup)="writtedTextToSubscribe($event)">
+            </div>
+        </div>
+        <div class="col displayFlex">
+            <div>
+                <label class="container">
+                    search in tags only
+                    <input class="form-check-input bb-checkbox" type="checkbox" id="defaultCheck1" (click)="testEvent($event)">
+                    <span class="checkmark"></span>
+                </label>                
+            </div>
+        </div>
+    </div>
+</div>

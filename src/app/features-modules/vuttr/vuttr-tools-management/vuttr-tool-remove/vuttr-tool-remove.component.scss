@@ -1,0 +1,18 @@
+.removeButtonClass{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.svgClose{
+    top: 0.13rem;
+    position: absolute;
+}
+
+#svgDiv{
+    position: relative;
+    min-width: 1rem;
+    min-height: 1rem;
+    margin-right: 0.3rem;
+}

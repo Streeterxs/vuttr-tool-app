@@ -1,0 +1,49 @@
+.card{
+    height: auto;
+}
+
+.card-body{
+    position: relative;
+}
+
+.displayFlex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#toolsWrapper{
+    min-width: 90%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tagsWrapper{
+    width: 70%;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.displayFlexForTags{
+    display: flex;
+    align-items: center;
+    min-height: 30%;
+}
+
+.removeButtonInsideToolCard{
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+}
+
+.clearRight{
+    clear: both;
+}
+
+.width50{
+    width: 50%;
+}
+
+.tagDescWrap{
+    margin-top: 1.5rem;
+}

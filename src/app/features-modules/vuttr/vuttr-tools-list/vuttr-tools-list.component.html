@@ -1,0 +1,20 @@
+<div id="toolsWrapper">
+    <div *ngFor="let tool of toolsForList">
+        <div class="card">
+            <div class="card-body">
+                <h3><a [href]="tool.link">{{tool.title}}</a></h3>
+                <bb-vuttr-tool-remove class="removeButtonInsideToolCard" [tool]="tool" (emitDeleteEvent)="receiveToolToRemoveConfirmation($event)"></bb-vuttr-tool-remove>
+                <div class="tagDescWrap clearRight">
+                    <p class="card-text">{{tool.description}}</p>
+                    <div class="displayFlexForTags">
+                        <div class="tagsWrapper row">
+                            <div class="col" *ngFor="let tag of tool.tags">
+                                #{{tag}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

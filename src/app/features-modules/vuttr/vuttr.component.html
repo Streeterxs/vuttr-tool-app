@@ -1,0 +1,17 @@
+<div class="displayFlex">
+    <div id="vuttrWrapper">
+        <div id="filterAddWrap" class="row">
+            <bb-vuttr-filter class="col-9" (emitTextToSearch)="getTextEmittedToChangeToolList($event)"></bb-vuttr-filter>
+            <div id="divForAddButton" class="col">
+                <div class="cssClassForPaddingCorrection">
+                    <bb-button  id="addButton" cssClasses="btn btn-primary buttonShadow" (click)="addButtonClick($event)"><i class="fas fa-plus"></i> add</bb-button>
+                </div>
+            </div>
+        </div>
+        <div id="clearBoth">
+            <bb-vuttr-tools-list [toolsForList]="toolsForList" [textToFilterTools]="textToFilterTools"></bb-vuttr-tools-list>
+        </div>
+    </div>
+</div>
+<bb-vuttr-add-tool></bb-vuttr-add-tool>
+<bb-remove-confirmation-modal></bb-remove-confirmation-modal>

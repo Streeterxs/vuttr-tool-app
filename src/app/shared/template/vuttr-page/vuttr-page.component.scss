@@ -1,0 +1,18 @@
+.displayFlex{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#contentWrapper{
+    width: 70%;
+    padding: 0;
+    margin: 0;
+}
+
+#pageWrapper{
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 4rem;
+}
+
